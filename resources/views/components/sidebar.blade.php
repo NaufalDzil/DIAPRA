@@ -91,6 +91,15 @@
               </li>
 
               <li class="nav-item">
+                <a href="{{Route('sisipan.index')}}" class="nav-link {{ Request::is('sisipan') ? 'active' : '' }}">
+                  <i class="nav-icon far fa-envelope"></i>
+                  <p>
+                    Sisipan Surat Keluar
+                  </p>
+                </a>
+              </li>
+
+              <li class="nav-item">
                 <a href="{{Route('kadis.index')}}" class="nav-link {{ Request::is('kadis') ? 'active' : '' }}">
                   <i class="nav-icon far fa-user"></i>
                   <p>

@@ -44,6 +44,7 @@
                 <table id="suratmasuk" class="table table-bordered table-striped">
                   <thead>
                   <tr class="text-center">
+                    <th>#</th>
                     <th>No</th>
                     <th>Tanggal</th>
                     <th>Nama Kegiatan</th>
@@ -54,6 +55,7 @@
                     <?php $__currentLoopData = $spj; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $key => $row): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
                     <tr class="text-center">
                       <td><?php echo e($key+1); ?></td>
+                      <td><?php echo e($row->id); ?></td>
                       <td><?php echo e(\Carbon\Carbon::parse($row->tanggal)->translatedFormat('d F Y')); ?></td>
                       <td><?php echo e($row->nama_kegiatan); ?></td>
                       <td class="text-center"><?php if($row->surat): ?>

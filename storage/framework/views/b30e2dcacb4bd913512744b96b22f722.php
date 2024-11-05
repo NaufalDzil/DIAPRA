@@ -53,25 +53,16 @@
 
                               <div class="form-group">
                                 <label>Tujuan Disposisi : <b class="text-danger">*</b></label>
-                                <select name="tujuan" id="tujuan" class="form-control">
-                                  <option value="<?php echo e($disposisi->tujuan); ?>"><?php echo e($disposisi->tujuan); ?></option>
-                            <?php if( $disposisi->tujuan != 'Sekretaris'): ?>
-                                <option value="Sekretaris">Sekretaris</option>
-                            <?php endif; ?>
-                            <?php if( $disposisi->tujuan != 'Kabid Keluarga Berencana'): ?>
-                                <option value="Kabid Keluarga Berencana">Kabid Keluarga Berencana</option>
-                            <?php endif; ?>
-                            <?php if( $disposisi->tujuan != 'Kabid Keluarga Sejahtera'): ?>
-                                <option value="Kabid Keluarga Sejahtera">Kabid Keluarga Sejahtera</option>
-                            <?php endif; ?>
-                            <?php if( $disposisi->tujuan != 'Kabid Pengendalian Penduduk dan Informasi Data'): ?>
-                                <option value="Kabid Pengendalian Penduduk dan Informasi Data">Kabid Pengendalian Penduduk dan Informasi Data</option>
-                            <?php endif; ?>
-                            <?php if( $disposisi->tujuan != 'Kabid Pemberdayaan Masyarakat'): ?>
-                                <option value="Kabid Pemberdayaan Masyarakat">Kabid Pemberdayaan Masyarakat</option>
-                            <?php endif; ?>
-                                </select>
-                              </div>
+                                <input list="tujuan-options" name="tujuan" id="tujuan" class="form-control" value="<?php echo e($disposisi->tujuan); ?>">
+                                <datalist id="tujuan-options">
+                                  <option value="Sekretaris">
+                                  <option value="Kabid Keluarga Berencana">
+                                  <option value="Kabid Keluarga Sejahtera">
+                                  <option value="Kabid Pengendalian Penduduk dan Informasi Data">
+                                  <option value="Kabid Pemberdayaan Masyarakat">
+                              </datalist>
+                            </div>
+                            
 
                           <div class="form-group">
                             <label>Disposisi : <small class="text text-muted">(Maksimal ukuran file 10MB)</small></label>

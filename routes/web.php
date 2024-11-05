@@ -5,6 +5,7 @@ use App\Http\Controllers\DisposisiController;
 use App\Http\Controllers\KadisController;
 use App\Http\Controllers\MouController;
 use App\Http\Controllers\NodinController;
+use App\Http\Controllers\SisipanController;
 use App\Http\Controllers\SkController;
 use App\Http\Controllers\SpjController;
 use App\Http\Controllers\SppdController;
@@ -35,17 +36,16 @@ Route::post('/suratmasuk/{suratmasuk}/disposisi/create', [DisposisiController::c
 Route::get('/suratmasuk/{suratmasuk}/disposisi/{disposisi}/edit', [DisposisiController::class, 'edit'])->name('disposisi.edit');
 Route::post('/suratmasuk/{suratmasuk}/disposisi/{disposisi}/edit', [DisposisiController::class, 'update'])->name('disposisi.update');
 Route::get('/suratmasuk/{suratmasuk}/disposisi/{disposisi}/surat', [DisposisiController::class, 'surat'])->name('disposisi.surat');
-// Route::get('/suratmasuk/{suratmasuk}/disposisi', [DisposisiController::class, 'index'])->name('disposisi.index');
-// Route::get('/suratmasuk/{suratmasuk}/disposisi/cetak', [DisposisiController::class, 'cetak'])->name('disposisi.cetak');
-// Route::get('/suratmasuk/{suratmasuk}/disposisi/create', [DisposisiController::class, 'create'])->name('disposisi.create');
-// Route::post('/suratmasuk/{suratmasuk}/disposisi/create', [DisposisiController::class, 'store'])->name('disposisi.store');
-// Route::get('/disposisi/{disposisi}/edit', [DisposisiController::class, 'edit'])->name('disposisi.edit');
-// Route::post('/disposisi/{disposisi}/edit', [DisposisiController::class, 'update'])->name('disposisi.update');
 
 //Surat Keluar
 Route::resource('suratkeluar', SuratKeluarController::class);
 Route::get('/suratkeluar/{suratkeluar}/surat', [SuratKeluarController::class, 'surat'])->name('suratkeluar.surat');
 Route::get('/suratkeluar/{suratkeluar}/edit', [SuratKeluarController::class, 'edit'])->name('suratkeluar.edit');
+
+//Sisipan
+Route::resource('sisipan', SisipanController::class);
+Route::get('/sisipan/{sisipan}/surat', [SisipanController::class, 'surat'])->name('sisipan.surat');
+Route::get('/sisipan/{sisipan}/edit', [SisipanController::class, 'edit'])->name('sisipan.edit');
 
 //SPJ UMPEG
 Route::resource('spj', SpjController::class);

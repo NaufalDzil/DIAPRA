@@ -44,6 +44,11 @@
                             <?php echo csrf_field(); ?>
                             <div class="card-body">
         
+                            <div class="form-group">
+                                <label>Nomor :</label>
+                                <input type="text" class="form-control" placeholder="<?php echo e($newId); ?>" readonly>
+                            </div>
+                            
                               <div class="form-group">
                                 <label>Nama/NIP : <b class="text-danger">*</b></label>
                                 <input type="text" name="nama" class="form-control" placeholder="Nama/NIP" required>

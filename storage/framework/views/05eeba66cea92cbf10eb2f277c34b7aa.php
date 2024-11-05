@@ -52,18 +52,20 @@
 
                               <div class="form-group">
                                 <label>Tujuan Disposisi : <b class="text-danger">*</b></label>
-                                <select name="tujuan" id="tujuan" class="form-control">
-                                  <option value="Sekretaris">Sekretaris</option>
-                                  <option value="Kabid Keluarga Berencana">Kabid Keluarga Berencana</option>
-                                  <option value="Kabid Keluarga Sejahtera">Kabid Keluarga Sejahtera</option>
-                                  <option value="Kabid Pengendalian Penduduk dan Informasi Data">Kabid Pengendalian Penduduk dan Informasi Data</option>
-                                  <option value="Kabid Pemberdayaan Masyarakat">Kabid Pemberdayaan Masyarakat</option>
-                                </select>
-                              </div>
+                                <input list="tujuan-options" name="tujuan" id="tujuan" class="form-control">
+                                <datalist id="tujuan-options">
+                                    <option value="Sekretaris">
+                                    <option value="Kabid Keluarga Berencana">
+                                    <option value="Kabid Keluarga Sejahtera">
+                                    <option value="Kabid Pengendalian Penduduk dan Informasi Data">
+                                    <option value="Kabid Pemberdayaan Masyarakat">
+                                </datalist>
+                            </div>
+                            
 
                           <div class="form-group">
                             <label>Disposisi : <small class="text text-muted">(Maksimal ukuran file 10MB)</small></label>
-                            <input type="file" accept=".pdf" name="disposisi" class="form-control" value="<?php echo e($suratmasuk->disposisi); ?>">
+                            <input type="file" accept=".pdf" name="disposisi" class="form-control">
                         </div>
         
                             <div class="text-right">

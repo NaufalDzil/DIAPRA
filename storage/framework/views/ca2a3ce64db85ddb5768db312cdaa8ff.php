@@ -61,10 +61,10 @@
                             <tr class="text-center">
                                 <td><?php echo e($key + 1); ?></td>
                                 <td><?php echo e($row->tujuan); ?></td>
-                                <td class="text-center">
-                                    <a href="#" class="btn btn-outline-success btn-sm">
-                                        <i class="far fa-file-pdf"></i> Surat
-                                    </a>
+                                <td class="text-center"><?php if($row->disposisi): ?>
+                                    <a href="<?php echo e(route('disposisi.surat', ['suratmasuk' => $suratmasuk->id, 'disposisi' => $row->id])); ?>" class="btn btn-outline-success btn-sm">
+                                        <i class="far fa-file-pdf"></i> Lembar Disposisi
+                                    </a><?php endif; ?>
                                     <a href="<?php echo e(route('disposisi.edit', ['suratmasuk' => $suratmasuk->id, 'disposisi' => $row->id])); ?>" class="btn btn-outline-danger btn-sm"><i class="fas fa-edit"></i> Edit</a>
                                 </td>
                             </tr>

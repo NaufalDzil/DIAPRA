@@ -91,6 +91,15 @@
               </li>
 
               <li class="nav-item">
+                <a href="<?php echo e(Route('sisipan.index')); ?>" class="nav-link <?php echo e(Request::is('sisipan') ? 'active' : ''); ?>">
+                  <i class="nav-icon far fa-envelope"></i>
+                  <p>
+                    Sisipan Surat Keluar
+                  </p>
+                </a>
+              </li>
+
+              <li class="nav-item">
                 <a href="<?php echo e(Route('kadis.index')); ?>" class="nav-link <?php echo e(Request::is('kadis') ? 'active' : ''); ?>">
                   <i class="nav-icon far fa-user"></i>
                   <p>

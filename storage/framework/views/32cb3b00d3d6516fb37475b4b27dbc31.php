@@ -44,6 +44,7 @@
                 <table id="suratmasuk" class="table table-bordered table-striped">
                   <thead>
                   <tr class="text-center">
+                    <th>#</th>
                     <th>No</th>
                     <th>Tanggal Penomoran</th>
                     <th>Alamat Penerima</th>
@@ -56,7 +57,8 @@
                     <?php $__currentLoopData = $nodin; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $key => $row): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
                     <tr class="text-center">
                       <td><?php echo e($key+1); ?></td>
-                      <td><?php echo e(\Carbon\Carbon::parse($row->tanggal_penomoran)->translatedFormat('d F Y')); ?></td>
+                      <td><?php echo e($row->id); ?></td>
+                      <td><?php echo e($row->tanggal_penomoran); ?></td>
                       <td><?php echo e($row->alamat); ?></td>
                       <td><?php echo e(\Carbon\Carbon::parse($row->tanggal_surat)->translatedFormat('d F Y')); ?></td>
                       <td><?php echo e($row->perihal); ?></td>
